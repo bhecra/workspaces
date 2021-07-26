@@ -1,0 +1,33 @@
+{
+  "name": "workspaces",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:app1": "npm start --workspace=app1",
+    "start:app2": "npm start --workspace=my-app2",
+    "build:app1": "npm run build --workspace=app1",
+    "build:app2": "npm run build --workspace=my-app2",
+    "build:react:app1": "npm run build:react --workspace=app1",
+    "build:react:app2": "npm run build:react --workspace=my-app2",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "app1",
+    "my-app2",
+    "packages\\a"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.15",
+    "typescript": "^4.3.5"
+  }
+}
